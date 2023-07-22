@@ -48,4 +48,56 @@
         <tag>missing-semster</tag>
       </tags>
   </entry>
+  <entry>
+    <title>missing-semester-notes lecture1</title>
+    <url>/2023/07/22/missing-semester-notes-lecture3/</url>
+    <content><![CDATA[<p><a class="link"   href="https://www.youtube.com/watch?v=a6Q8Na575qc&t=4s" >Lecture 3: Editors (vim) (2020) - YouTube <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>vim is a model editor<br>![[vim 2023-07-22 15.56.55.excalidraw]]</p>
+<h1 id="model"><a href="#model" class="headerlink" title="model"></a>model</h1><p>\ctrl-V &lt;C-V&gt;都代表ctrl-v</p>
+<h2 id="normal"><a href="#normal" class="headerlink" title="normal"></a>normal</h2><p>用于从一个文件跳转到另一个文件</p>
+<p>![[Pasted image 20230722164948.png]]</p>
+<p><mark style="background: #ADCCFFA6;">what does that mean ? it means that different key combinations have different effects ,and, once you learn the different effects ,you can actually combine them together -just like in a programming language</mark></p>
+<div class="highlight-container" data-rel="Vim"><figure class="iseeu highlight vim"><table><tr><td class="code"><pre><span class="line"><span class="number">4</span>dw # 可以在命令前加数字表示执行次数,删除<span class="number">4</span>个词</span><br><span class="line">modifier i /<span class="keyword">a</span>( i stands <span class="keyword">for</span> inside /<span class="keyword">a</span> stands <span class="keyword">for</span> around)</span><br><span class="line"> ci\[ # 将括号内部删除，并将光标进入括号内，进入编辑模式<span class="keyword">change</span> inside \[ ]</span><br><span class="line">da\[ # 将括号及内部均删除</span><br><span class="line">/  # 表示搜索</span><br><span class="line">.   # 重复之前操作</span><br></pre></td></tr></table></figure></div>
+
+
+
+
+<p>![[Pasted image 20230722180408.png]]</p>
+<div class="highlight-container" data-rel="Vim"><figure class="iseeu highlight vim"><table><tr><td class="code"><pre><span class="line">hjkl # 为方向键h为左<span class="keyword">j</span>为下<span class="keyword">k</span>为上<span class="keyword">l</span>为右</span><br><span class="line">在括号上可以使用%跳转</span><br><span class="line"><span class="keyword">w</span> # <span class="keyword">move</span> the <span class="built_in">cursor</span> forward by one word</span><br><span class="line"></span><br><span class="line"><span class="keyword">b</span> # <span class="keyword">move</span> the <span class="built_in">cursor</span> backward by one word</span><br><span class="line"></span><br><span class="line"><span class="keyword">e</span>  # <span class="keyword">move</span> <span class="keyword">to</span> the end of the word</span><br><span class="line"></span><br><span class="line"><span class="number">0</span> # <span class="keyword">move</span> <span class="keyword">to</span> the beginning of the <span class="built_in">line</span> </span><br><span class="line"></span><br><span class="line">$ # <span class="keyword">move</span> <span class="keyword">to</span> the end of <span class="built_in">line</span></span><br><span class="line"></span><br><span class="line">^ # <span class="keyword">move</span> <span class="keyword">to</span> the <span class="keyword">first</span> non-<span class="built_in">empty</span> character <span class="keyword">on</span> the <span class="built_in">line</span></span><br><span class="line"></span><br><span class="line">ctrl <span class="keyword">u</span>  scroll <span class="keyword">up</span> the buffet</span><br><span class="line"></span><br><span class="line">ctrl d  # scroll down the buffet</span><br><span class="line"></span><br><span class="line">capital g # <span class="keyword">move</span> <span class="keyword">to</span> the end of <span class="keyword">file</span></span><br><span class="line"></span><br><span class="line">gg # <span class="keyword">move</span> <span class="keyword">to</span> the beginning of the <span class="keyword">file</span></span><br><span class="line"></span><br><span class="line">L # <span class="keyword">move</span> <span class="keyword">to</span> lowest place <span class="keyword">on</span> screen</span><br><span class="line"></span><br><span class="line">M # middle</span><br><span class="line"></span><br><span class="line">H # highest</span><br><span class="line"></span><br><span class="line"><span class="keyword">fo</span> # <span class="keyword">f</span>指代<span class="keyword">find</span>，该命令会跳转到光标后的第一个<span class="keyword">o</span>其他字母同理（字符也可以）</span><br><span class="line"></span><br><span class="line">Fo # 跳转到光标后的第一个<span class="keyword">o</span></span><br><span class="line"></span><br><span class="line">t/T # 和<span class="keyword">f</span>用法一致，跳转到寻找的字母前一个位置</span><br><span class="line"></span><br><span class="line"><span class="keyword">o</span> # <span class="keyword">open</span> <span class="keyword">a</span> <span class="keyword">new</span> <span class="built_in">line</span> below</span><br><span class="line"></span><br><span class="line">O # <span class="keyword">open</span> <span class="keyword">a</span> <span class="keyword">new</span> <span class="built_in">line</span> above</span><br><span class="line"></span><br><span class="line">d+<span class="keyword">w</span> # <span class="keyword">delete</span> the word</span><br><span class="line"></span><br><span class="line">D # 删除光标后本行的内容</span><br><span class="line"></span><br><span class="line">dd # <span class="keyword">delete</span> the <span class="built_in">line</span></span><br><span class="line"></span><br><span class="line">de # <span class="keyword">delete</span> the end of the word当你的光标在中间时</span><br><span class="line"></span><br><span class="line"><span class="keyword">u</span> # <span class="keyword">undo</span></span><br><span class="line">如果我在<span class="keyword">insert</span> model进行了一系列操作，回到<span class="keyword">normal</span> model,<span class="keyword">undo</span>会撤销我的所有<span class="keyword">insert</span>操作，但若只是在<span class="keyword">normal</span>删除，<span class="keyword">undo</span>只会恢复上一步删除的（感觉都是撤出<span class="keyword">normal</span> model下的上一步操作内容）</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ctrl R  # <span class="keyword">redo</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">c</span> # <span class="keyword">change</span>与<span class="keyword">delete</span>类似，但会在删除的位置进入<span class="keyword">insert</span> <span class="keyword">mode</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">cc</span> # <span class="keyword">change</span> the <span class="built_in">line</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">x</span> # 删除后面一个字符</span><br><span class="line"></span><br><span class="line"><span class="keyword">X</span> # 设置密码</span><br><span class="line"></span><br><span class="line">r # replace此时再输入一个字符会替换掉光标所在的字符</span><br><span class="line"></span><br><span class="line"><span class="keyword">y</span> # <span class="keyword">copy</span>然后单一字母无法完成</span><br><span class="line"></span><br><span class="line">yy # 复制整行</span><br><span class="line"></span><br><span class="line"><span class="keyword">p</span> # paste</span><br><span class="line">~ # 可以改变大小写，大写改小写</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h2 id="insert-model"><a href="#insert-model" class="headerlink" title="insert model"></a>insert model</h2><p>type in text</p>
+<h2 id="replace"><a href="#replace" class="headerlink" title="replace"></a>replace</h2><h2 id="visual"><a href="#visual" class="headerlink" title="visual"></a>visual</h2><p>![[Pasted image 20230722174354.png]]</p>
+<p>从鼠标开始的位置，按方向键就会选中之间的内容，按下y就会复制其中内容。并回到normal</p>
+<h2 id="visual-line"><a href="#visual-line" class="headerlink" title="visual line"></a>visual line</h2><p>和visual类似但是选中以行为单位</p>
+<h2 id="visual-block"><a href="#visual-block" class="headerlink" title="visual block"></a>visual block</h2><h2 id="command-line"><a href="#command-line" class="headerlink" title="command line"></a>command line</h2><p>输入’:’后，跟随命令<br>如退出命令 （多标签页，多窗口的情况下，关闭当前窗口，再关闭当前标签页，最后关闭编辑器）</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">: q</span><br></pre></td></tr></table></figure></div>
+
+<p>以及保存命令</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">: w</span><br></pre></td></tr></table></figure></div>
+
+<p>代表write</p>
+<p>help 用于查询</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">:help  :w</span><br></pre></td></tr></table></figure></div>
+<p>查询’:w’命令</p>
+<p>sp拆分终端</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">:sp</span><br></pre></td></tr></table></figure></div>
+
+
+<p>![[Pasted image 20230722164315.png]]</p>
+<p>![[Pasted image 20230722164353.png]]</p>
+<p>：tabnew 新建标签页</p>
+<p>![[Pasted image 20230722164524.png]]</p>
+]]></content>
+      <categories>
+        <category>计算机</category>
+        <category>编程入门</category>
+        <category>vim</category>
+      </categories>
+      <tags>
+        <tag>vim</tag>
+        <tag>missing-semester</tag>
+      </tags>
+  </entry>
 </search>
